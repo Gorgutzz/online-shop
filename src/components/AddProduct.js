@@ -81,6 +81,62 @@ class AddProduct extends Component {
                   required
                 />
               </div>
+              <div className="field">
+                <label className="label">Price: </label>
+                <input
+                  className="input"
+                  type="number"
+                  name="price"
+                  value={price}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
+              <div className="field">
+                <label className="label">Available in Stock: </label>
+                <input
+                  className="input"
+                  type="number"
+                  name="stock"
+                  value={stock}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="field">
+                <label className="label">Short Description: </label>
+                <input
+                  className="input"
+                  type="text"
+                  name="shortDesc"
+                  value={shortDesc}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="field">
+                <label className="label">Description: </label>
+                <textarea
+                  className="textarea"
+                  type="text"
+                  rows="2"
+                  style={{ resize: "none" }}
+                  name="description"
+                  value={description}
+                  onChange={this.handleChange}
+                />
+              </div>
+              {this.state.flash && (
+                <div className={`notification ${this.state.flash.status}`}>
+                  {this.state.flash.msg}
+                </div>
+              )}
+              <div className="field is-clearfix">
+                <button
+                  className="button is-primary is-outlined is-pulled-right"
+                  type="submit"
+                  onClick={this.save}
+                >
+                  Submit
+                </button>
               </div>
             </div>
           </div>
