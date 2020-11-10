@@ -8,7 +8,7 @@ import ApolloClient from "apollo-boost";
 import "bulma/css/bulma.css";
 
 const client = new ApolloClient({
-  uri: "<YOUR_8BASE_ENDPOINT>"
+  uri: "<https://api.8base.com/ckhb7wkhw00jf08l92w6u9s05>"
 });
 
 ReactDOM.render(
