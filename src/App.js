@@ -32,7 +32,7 @@ export default class App extends Component {
     this.setState({ user,  products: products.data, cart });
   }
 
-    login = async (email, password) => {
+  login = async (email, password) => {
     const res = await axios.post(
       'http://localhost:3001/login',
       { email, password },
@@ -140,7 +140,7 @@ export default class App extends Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand">
-              <b className="navbar-item is-size-4 ">ecommerce</b>
+              <b className="navbar-item is-size-4 ">Online Shop</b>
               <label
                 role="button"
                 class="navbar-burger burger"
